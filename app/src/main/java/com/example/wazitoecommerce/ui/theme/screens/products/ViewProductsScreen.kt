@@ -107,7 +107,7 @@ fun ProductItem(name:String, quantity:String, price:String, id:String,
             modifier = Modifier
                 .fillMaxWidth()
         ) {
-            Text(text = "Delete")git
+            Text(text = "Delete")
         }
         Button(
             onClick = {
