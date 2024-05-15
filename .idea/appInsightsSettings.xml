@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.wazitoecommerce" />
+                  <option name="mobileSdkAppId" value="1:483241607089:android:0376d8a181cc5c884b0790" />
+                  <option name="projectId" value="wazito-ecommerce" />
+                  <option name="projectNumber" value="483241607089" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

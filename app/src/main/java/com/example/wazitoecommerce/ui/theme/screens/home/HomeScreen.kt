@@ -1,6 +1,7 @@
 package com.example.wazitoecommerce.ui.theme.screens.home
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -104,16 +105,17 @@ fun HomeScreen(navController:NavHostController) {
 
             //Content Section
             content = @Composable {
-                LazyColumn {
+                LazyColumn(verticalArrangement = Arrangement.Center
+                ) {
                     items(products) {
                         ProductItem(
+                            productImage = it.imageUrl,
                             name = it.name,
                             quantity = it.quantity,
                             price = it.price,
                             id = it.id,
                             navController = navController,
-                            productRepository = productRepository,
-                            productImage = it.imageUrl
+                            productRepository = productRepository
                         )
                     }
                 }

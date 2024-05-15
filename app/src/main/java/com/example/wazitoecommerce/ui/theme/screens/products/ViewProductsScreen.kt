@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -67,13 +68,14 @@ fun ViewProductsScreen(navController:NavHostController) {
            LazyColumn{
                 items(products){
                     ProductItem(
+                        productImage = it.imageUrl,
                         name = it.name,
                         quantity = it.quantity,
                         price = it.price,
                          id = it.id,
                         navController = navController,
                         productRepository = productRepository,
-                        productImage = it.imageUrl
+
                     )
                 }
             }
@@ -87,16 +89,18 @@ fun ProductItem(name:String, quantity:String, price:String, id:String,
                 navController:NavHostController,
                 productRepository:ProductViewModel, productImage:String) {
 
-    Column(modifier = Modifier.fillMaxWidth()) {
+    Column(modifier = Modifier.fillMaxWidth()
+    ) {
         val mContext = LocalContext.current
-        Text(text = name)
-        Text(text = quantity)
-        Text(text = price)
+
         Image(
             painter = rememberAsyncImagePainter(productImage),
             contentDescription = null,
-            modifier = Modifier.size(210.dp)
+            modifier = Modifier.size(250.dp).padding(start = 100.dp)
         )
+        Text(text = name)
+        Text(text = quantity)
+        Text(text = price)
         Button(onClick = { navController.navigate(HOME_URL) },
             modifier = Modifier
                 .fillMaxWidth()
@@ -151,6 +155,7 @@ fun ProductItem(name:String, quantity:String, price:String, id:String,
                 text = "MPESA"
             )
         }
+        Spacer(modifier = Modifier.height(30.dp))
     }
 }
 
