@@ -41,6 +41,9 @@ fun AboutScreen(navController: NavController) {
                 )
             Text(text = "2.For Drivers if you want to add your profile you can  press the add in home page.",
                 fontSize = 35.sp)
+
+            Text(text ="This app enables you pay via Mpesa",
+                fontSize = 35.sp)
     }
 }
 
