@@ -37,13 +37,20 @@ fun AboutScreen(navController: NavController) {
         Spacer(modifier = Modifier.height(20.dp))
 
             Text(text = "1.To see the available driver you can view from the our drivers page.",
-                fontSize = 35.sp
+                fontSize = 35.sp,
+                modifier = Modifier
+                    .padding(10.dp)
                 )
-            Text(text = "2.For Drivers if you want to add your profile you can  press the add in home page.",
-                fontSize = 35.sp)
+            Text(text = "2. For Drivers if you want to add your profile you can  press the add in home page.",
+                fontSize = 35.sp,
+                modifier = Modifier
+                    .padding(10.dp)
+            )
 
-            Text(text ="This app enables you pay via Mpesa",
-                fontSize = 35.sp)
+            Text(text ="3. This app enables you pay via Mpesa.",
+                fontSize = 35.sp,
+                modifier = Modifier
+                    .padding(10.dp))
     }
 }
 

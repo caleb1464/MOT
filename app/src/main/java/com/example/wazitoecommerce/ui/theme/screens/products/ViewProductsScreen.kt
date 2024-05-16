@@ -98,9 +98,12 @@ fun ProductItem(name:String, quantity:String, price:String, id:String,
             contentDescription = null,
             modifier = Modifier.size(250.dp).padding(start = 100.dp)
         )
-        Text(text = name)
-        Text(text = quantity)
-        Text(text = price)
+        Text(text = name,
+            modifier = Modifier.padding(start = 40.dp))
+        Text(text = quantity,
+            modifier = Modifier.padding(start = 40.dp))
+        Text(text = price,
+            modifier = Modifier.padding(start = 40.dp))
         Button(onClick = { navController.navigate(HOME_URL) },
             modifier = Modifier
                 .fillMaxWidth()
