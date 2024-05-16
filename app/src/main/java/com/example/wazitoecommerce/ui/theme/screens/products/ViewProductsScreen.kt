@@ -129,7 +129,7 @@ fun ProductItem(name:String, quantity:String, price:String, id:String,
         Button(
             onClick = {
                 val smsIntent = Intent(Intent.ACTION_SENDTO)
-                smsIntent.data = "smsto:0720245837".toUri()
+                smsIntent.data = "smsto:0757605094".toUri()
                 smsIntent.putExtra("sms_body", "Hello there ?,I need a ride.")
                 mContext.startActivity(smsIntent)
             },
